@@ -12,7 +12,7 @@
     </parent>
 
     <groupId>io.confluent.kafka-mqtt-images</groupId>
-    <artifactId>kafka-mqtt</artifactId>
+    <artifactId>cp-kafka-mqtt</artifactId>
     <name>Kafka MQTT Docker Image</name>
 
     <properties>
