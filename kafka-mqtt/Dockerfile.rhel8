@@ -33,12 +33,12 @@ ARG CONFLUENT_VERSION
 ARG CONFLUENT_PACKAGES_REPO
 ARG CONFLUENT_PLATFORM_LABEL
 
-
 ENV COMPONENT=kafka-mqtt
 
 # standart non-encrypted MQTT port
 EXPOSE 1883
 
+USER root
 
 RUN echo "===> Installing ${COMPONENT}..." \
     && yum -q -y update \
@@ -60,10 +60,13 @@ enabled=1 " > /etc/yum.repos.d/confluent.repo \
     && yum install -y confluent-${COMPONENT}-${CONFLUENT_VERSION} \
     && echo "===> Cleaning up ..."  \
     && yum clean all \
-    && rm -rf /tmp/*  \
+    && rm -rf /tmp/* \
     && echo "===> Setting up ${COMPONENT} dirs" \
+    && chown appuser:appuser -R /etc/confluent-${COMPONENT} \
     && chmod -R ag+w /etc/confluent-${COMPONENT}
 
-COPY include/etc/confluent/docker /etc/confluent/docker
+COPY --chown=appuser:appuser include/etc/confluent/docker /etc/confluent/docker
+
+USER appuser
 
 CMD ["/etc/confluent/docker/run"]
