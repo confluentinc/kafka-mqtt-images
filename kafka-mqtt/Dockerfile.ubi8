@@ -49,7 +49,7 @@ RUN echo "===> Installing ${COMPONENT}..." \
     && yum install -y confluent-${COMPONENT}-${CONFLUENT_VERSION} \
     && echo "===> Cleaning up ..."  \
     && yum clean all \
-    && rm -rf /tmp/* \
+    && rm -rf /tmp/* /etc/yum.repos.d/confluent.repo \
     && echo "===> Setting up ${COMPONENT} dirs" \
     && chown appuser:appuser -R /etc/confluent-${COMPONENT} \
     && chmod -R ag+w /etc/confluent-${COMPONENT}
