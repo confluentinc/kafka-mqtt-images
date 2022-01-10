@@ -66,8 +66,8 @@ enabled=1 " > /etc/yum.repos.d/confluent.repo \
     && yum clean all \
     && rm -rf /tmp/* /etc/yum.repos.d/confluent.repo \
     && echo "===> Setting up ${COMPONENT} dirs" \
-    && chown appuser:appuser -R /etc/confluent-${COMPONENT} \
-    && chmod -R g+w /etc/confluent-${COMPONENT}
+    && chown appuser:root -R /etc/confluent-${COMPONENT} \
+    && chmod -R ug+w /etc/confluent-${COMPONENT}
 
 COPY --chown=appuser:appuser include/etc/confluent/docker /etc/confluent/docker
 
