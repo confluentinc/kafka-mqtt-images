@@ -1,5 +1,1 @@
-# See go/codeowners - automatically generated for confluentinc/kafka-mqtt-images:
-*	@ConfluentJenkins
-*	@SamehTawfik
-*	@andrewegel
-*	@jkao97
+*	@confluentinc/connect-team1 
