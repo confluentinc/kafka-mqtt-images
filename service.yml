@@ -1,0 +1,15 @@
+name: kafka-mqtt-images
+lang: unknown
+git:
+  enable: true
+codeowners:
+  enable: true
+semaphore: 
+  enable: true
+  pipeline_type: cp-dockerfile
+  docker_repos: ['confluentinc/cp-kafka-mqtt',]              
+  maven_phase: 'package'                              
+  maven_skip_deploy: true                   
+  os_types: ['ubi8']                                    
+  build_arm: false
+  nano_version: false
