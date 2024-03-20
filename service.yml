@@ -11,6 +11,5 @@ semaphore:
   maven_phase: 'package'                              
   maven_skip_deploy: true                   
   os_types: ['ubi8']                                    
-  cp_images: true
   build_arm: false
   nano_version: false
