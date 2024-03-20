@@ -1,0 +1,9 @@
+name: kafka-mqtt-images
+lang: unknown
+git:
+  enable: true
+codeowners:
+  enable: true
+semaphore: 
+  enable: true
+  pipeline_type: cp-dockerfile
