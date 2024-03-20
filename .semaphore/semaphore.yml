@@ -26,7 +26,7 @@ global_job_config:
       - checkout
       - sem-version java 8
       - . cache-maven restore
-      - export GIT_COMMIT=$(git rev-parse --verify HEAD --short)
+      - export GIT_COMMIT_TAG=$GIT_COMMIT$OS_TAG$AMD_ARCH
       - export BUILD_NUMBER=$(echo $SEMAPHORE_WORKFLOW_ID | cut -f1 -d"-")
       - export BRANCH_TAG=$(echo $SEMAPHORE_GIT_BRANCH | tr / -)
       - export DOCKER_DEV_REGISTRY="519856050701.dkr.ecr.us-west-2.amazonaws.com/docker/dev/"
