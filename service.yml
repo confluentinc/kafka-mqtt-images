@@ -64,3 +64,5 @@ semaphore:
           options:
             - 'deb'
             - 'ubi'
+sonarqube:
+  enable: true
