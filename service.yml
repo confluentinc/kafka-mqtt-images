@@ -7,11 +7,12 @@ codeowners:
 semaphore: 
   enable: true
   pipeline_type: cp-dockerfile
-  docker_repos: ['unsynced-confluentinc/cp-kafka-mqtt',]              
+  docker_repos: ['confluentinc/cp-kafka-mqtt',]              
   maven_phase: 'package'    
   cve_scan : false                          
   maven_skip_deploy: true                   
   os_types: ['ubi8']                                    
+  build_arm: false
   use_packages: true
   cp_images: true
   nano_version: true
