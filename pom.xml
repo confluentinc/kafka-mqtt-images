@@ -22,7 +22,7 @@
     <parent>
         <groupId>io.confluent</groupId>
         <artifactId>common-docker</artifactId>
-        <version>[7.1.14-0, 7.1.15-0)</version>
+        <version>7.1.14-5</version>
     </parent>
 
     <groupId>io.confluent.kafka-mqtt-images</groupId>
@@ -30,7 +30,7 @@
     <packaging>pom</packaging>
     <name>Kafka MQTT Docker Images</name>
     <description>Build files for Confluent's Kafka MQTT Docker images</description>
-    <version>7.1.14-0</version>
+    <version>7.1.14-5</version>
 
     <modules>
         <module>kafka-mqtt</module>
@@ -38,6 +38,6 @@
 
     <properties>
         <component.name>kafka-mqtt</component.name>
-        <io.confluent.kafka-mqtt-images.version>7.1.14-0</io.confluent.kafka-mqtt-images.version>
+        <io.confluent.kafka-mqtt-images.version>7.1.14-5</io.confluent.kafka-mqtt-images.version>
     </properties>
 </project>
