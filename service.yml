@@ -4,6 +4,10 @@ git:
   enable: true
 codeowners:
   enable: true
+code_artifact:
+  enable: true
+  package_paths:
+    - maven-snapshots/maven/io.confluent.kafka-mqtt-images/kafka-mqtt-images-parent
 semaphore: 
   enable: true
   pipeline_type: cp-dockerfile
