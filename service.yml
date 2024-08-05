@@ -8,6 +8,7 @@ code_artifact:
   enable: true
   package_paths:
     - maven-snapshots/maven/io.confluent.kafka-mqtt-images/kafka-mqtt-images-parent
+    - maven-snapshots/maven/io.confluent.kafka-mqtt-images/cp-kafka-mqtt
 semaphore: 
   enable: true
   pipeline_type: cp-dockerfile
