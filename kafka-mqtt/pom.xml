@@ -23,7 +23,7 @@
     <parent>
         <groupId>io.confluent.kafka-mqtt-images</groupId>
         <artifactId>kafka-mqtt-images-parent</artifactId>
-        <version>7.2.12-0</version>
+        <version>7.2.12-15</version>
     </parent>
 
     <groupId>io.confluent.kafka-mqtt-images</groupId>
