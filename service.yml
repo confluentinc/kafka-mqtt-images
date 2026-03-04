@@ -1,5 +1,6 @@
 name: kafka-mqtt-images
-lang: unknown
+lang: java
+lang_version: "11"
 git:
   enable: true
 codeowners:
